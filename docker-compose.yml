@@ -12,7 +12,7 @@ services:
       - TZ=Etc/UTC
       - URL=thelinuxtrainer.com
       - VALIDATION=http
-      - SUBDOMAINS=vroom, vroom-adm, p2p, c2c, bro #optional
+      - SUBDOMAINS=vroom, vroomadm, p2p, c2c, bro #optional
       - CERTPROVIDER= #optional
       - PROPAGATION= #optional
       - EMAIL=thegnulinuxtrainer@gmail.com#optionalvchat

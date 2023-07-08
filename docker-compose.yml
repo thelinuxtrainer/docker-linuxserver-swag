@@ -26,11 +26,11 @@ services:
       - 80:80 #optional
     restart: unless-stopped
     networks:
-        swag-network:
+        swag_network:
           aliases:
             - swag
 networks:
-  swag-network:
+  swag_network:
     driver: bridge
     driver_opts:
       com.docker.network.bridge.name: br-swag

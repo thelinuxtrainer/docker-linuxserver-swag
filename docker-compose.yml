@@ -9,10 +9,10 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Asia/Colombo
       - URL=thelinuxtrainer.com
       - VALIDATION=http
-      - SUBDOMAINS=vroom, vroomadm, p2p, c2c, bro #optional
+      - SUBDOMAINS=vroom, vroomadm, p2p, c2c, bro, #optional
       - CERTPROVIDER= #optional
       - PROPAGATION= #optional
       - EMAIL=thegnulinuxtrainer@gmail.com #optional

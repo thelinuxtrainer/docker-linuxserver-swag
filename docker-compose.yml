@@ -10,19 +10,34 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - URL=yourdomain.url
+      - URL=thelinuxtrainer.com
       - VALIDATION=http
-      - SUBDOMAINS=www, #optional
+      - SUBDOMAINS=vroom, vroom-adm, p2p, c2c, bro #optional
       - CERTPROVIDER= #optional
-      - DNSPLUGIN=cloudflare #optional
       - PROPAGATION= #optional
-      - EMAIL= #optional
-      - ONLY_SUBDOMAINS=false #optional
+      - EMAIL=thegnulinuxtrainer@gmail.com#optionalvchat
+      - ONLY_SUBDOMAINS=true #optional
       - EXTRA_DOMAINS= #optional
       - STAGING=false #optional
     volumes:
-      - /path/to/appdata/config:/config
+      - ./appdata/config:/config
     ports:
       - 443:443
       - 80:80 #optional
     restart: unless-stopped
+    networks:
+        swag-network:
+          aliases:
+            - swag
+networks:
+  swag-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br-swag
+    enable_ipv6: true
+    ipam:
+      driver: default
+      config:
+        - subnet: ${IPV4_NETWORK:-172.22.1}.0/24
+        - subnet: ${IPV6_NETWORK:-fd4d:6169:6c63:6f77::/64}
+    

@@ -1,5 +1,5 @@
 ---
-version: "2.1"
+version: "3"
 services:
   swag:
     image: lscr.io/linuxserver/swag:latest
@@ -15,7 +15,7 @@ services:
       - SUBDOMAINS=vroom, vroomadm, p2p, c2c, bro #optional
       - CERTPROVIDER= #optional
       - PROPAGATION= #optional
-      - EMAIL=thegnulinuxtrainer@gmail.com#optionalvchat
+      - EMAIL=thegnulinuxtrainer@gmail.com #optional
       - ONLY_SUBDOMAINS=true #optional
       - EXTRA_DOMAINS= #optional
       - STAGING=false #optional
